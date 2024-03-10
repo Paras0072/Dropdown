@@ -1,0 +1,14 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.box-container {
+  border: 2px solid #ccc;
+  padding: 150px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: lightblue;
+}

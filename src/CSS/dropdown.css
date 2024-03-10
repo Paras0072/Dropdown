@@ -1,0 +1,61 @@
+/* Dropdown.css */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  padding: 15px;
+  cursor: pointer;
+  width: 200px;
+  text-align: left;
+  outline: none;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow::before {
+  content: '▼'; /* Default arrow pointing down */
+}
+
+.arrow.up::before {
+  content: '▲'; /* Arrow pointing up when dropdown is open */
+}
+
+
+.dropdown-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 200px;
+  text-align: left;
+  max-height: 100px; /* Adjust this value based on your needs */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.dropdown-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dropdown-list li:last-child {
+  border-bottom: none;
+}
+
+/* Arrow styles */
+.dropdown-container.open .arrow::before {
+  content: '▲'; /* Change arrow to point up when dropdown is open */
+}
